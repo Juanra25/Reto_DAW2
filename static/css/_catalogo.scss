@@ -1,0 +1,162 @@
+@use "vars";
+
+section#categoria_Producto{
+    background-color: vars.$background-paginas;
+}
+
+
+section.catalogo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    
+    h2{
+        font-size:3rem;
+    }
+
+    div{
+        display:flex;
+        flex-direction: row;
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        figure{
+
+            width:300px;
+            height:300px;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 0 2px 1px;
+            overflow:hidden;
+          
+
+           
+
+
+            &:hover{
+                box-shadow: 0 0 4px 2px;
+                p{
+                    right:-9rem;
+                    top:1.5rem;
+                }
+                button {
+                    display: block;
+                }
+               
+                
+            }
+
+            img{
+                width:100%;
+                height:100%;
+                
+                
+            }
+
+            figcaption{
+                position: absolute;
+                top: 0;
+                left:0;
+                right:0;
+                padding:1.5rem;
+                background : linear-gradient(
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0.5) 100%,
+
+                );
+                
+               
+                justify-content: center;
+                align-items: center;
+            }
+            button{
+                width: 100%;
+                padding: 1rem;
+                background-color: vars.$background;
+                color: vars.$font-color;
+                border: none;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: none;
+
+            }
+            button:hover{
+                background-color: vars.$color_fondo_footer;
+            }
+
+            a{
+                color:vars.$color_fuente_menu;
+                text-decoration: none;
+            }
+
+         
+
+            p {
+                background-color: vars.$color_fondo_footer;
+                color:white;
+                padding:1rem 10rem;
+                position:absolute;
+                transform: rotate(45deg);
+                right:-80rem;
+                top:20rem;
+                transition:0.2s;
+            }
+
+            
+            
+        }
+    }
+}
+
+
+section.busqueda{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+div#paginas{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+ul.paginacion{
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    .paginacion-item {
+        margin-right: 10px;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 2rem;
+    }
+    
+    .paginacion-item.active {
+        background-color: #007BFF;
+        color: #fff;
+    }
+    button{
+       
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit;
+    }
+    li{
+        background-color: white;
+    }
+    
+}

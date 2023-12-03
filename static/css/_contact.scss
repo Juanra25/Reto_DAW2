@@ -1,0 +1,130 @@
+@use "vars";
+
+.contactUs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto, auto auto;
+    grid-template-areas:
+        "formulario contacto"
+        "formulario horario"
+        "mapa mapa";
+    min-height: 100vh;
+    gap: 20px;
+    background-color: vars.$background;
+
+    .contactForm {
+        grid-area: formulario;
+        padding: 1em 1em 1em 8em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        h2 {
+            text-align: center;
+        }
+
+        #subtitulo {
+            padding: 0;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+
+            p {
+                text-align: left;
+                margin-left: 1em;
+                margin-bottom: 0;
+                padding: 1em;
+                background-color: vars.$login-button-background;
+                border-radius: 1em;
+                width: fit-content;
+
+            }
+
+            input {
+                margin: 0.5em 0 0 1em;
+                width: 80%;
+                padding: 1em;
+                border: 2px solid vars.$contact-border-color;
+                border-radius: 5px;
+            }
+
+            textarea {
+                margin: 1em 0 0 1em;
+                padding: 1em;
+                border: 2px solid vars.$contact-border-color;
+                border-radius: 5px;
+                width: 80%;
+            }
+
+            input[type="submit"] {
+                margin-left: 1em;
+                cursor: pointer;
+                justify-content: center;
+            }
+        }
+    }
+
+    .contactInfo {
+        grid-area: contacto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 1em 8em 1em 4em;
+
+        h3 {
+            background-color: vars.$login-button-background;
+            border-radius: 1em;
+            width: fit-content;
+            padding: 0.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin: 0 0 0.75em 1em;
+            }
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        address {
+            p {
+                margin: 0.5em 0 0 1.5em;
+            }
+        }
+    }
+
+    .scheduleInfo {
+        grid-area: horario;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 1em 8em 1em 4em;
+
+        h3 {
+            background-color: vars.$login-button-background;
+            border-radius: 1em;
+            width: fit-content;
+            padding: 0.5em;
+        }
+
+    }
+
+    .map {
+        grid-area: mapa;
+        margin: 2em 10em 2em 10em;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+        }
+    }
+}

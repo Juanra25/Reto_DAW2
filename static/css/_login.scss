@@ -1,0 +1,72 @@
+@use "vars";
+.signup {
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10rem;
+        background-image: url("../img/background-image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        form {
+            margin-right: 1rem;
+            margin-right: 1.5rem;
+
+            fieldset {
+                border-radius: 1rem;
+                background-color: vars.$background;
+                border-color: vars.$border-color;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                legend {
+                    text-align: left;
+                    background-color: vars.$background;
+                    border-radius: 1rem;
+                    border-top: solid 2px vars.$border-color;
+                    padding: 0.2rem;
+                    color: white;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    input {
+                        margin-left: 2rem;
+
+                        &:hover {
+                            border-color: pink;
+                        }
+                    }
+
+                    &#signup {
+                        justify-content: center;
+                        width: fit-content;
+                        align-self: center;
+
+                        input {
+                            margin: 0px;
+                            cursor:pointer;
+                        }
+                    }
+                    &.error{
+                        color:red;
+                    }
+                }
+            }
+        }
+        p {
+            color: white;
+            padding: 0.75rem;
+            background-color: vars.$login-button-background;
+            border-radius: 1rem;
+        }
+    }
+    
+}

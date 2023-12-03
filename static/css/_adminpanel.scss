@@ -1,0 +1,140 @@
+@use "vars";
+
+table.hidden {
+    display: none;
+}
+
+section.controlPanel {
+    min-height: 700px;
+    background-color: vars.$background;
+}
+
+::backdrop{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+section .products {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 20rem 2rem;
+    background-color: vars.$background;
+    height: 50%;
+
+
+    table#productTable {
+        margin-top: 2rem;
+        border: 2px solid vars.$border-color;
+        // border-radius: 5em;
+        //border-collapse: collapse;
+        //border-spacing: 10px;
+        background-color: vars.$table-background;
+        border-collapse: collapse;
+        border-radius: 30px;
+        border-style: hidden;
+        box-shadow: 7px 6px 10px 2px vars.$border-color;
+
+
+        tr {
+            border: 2px solid vars.$border-color;
+            border-collapse: collapse;
+
+            &:hover td {
+                background-color: vars.$login-button-background;
+            }
+
+        
+
+            td {
+                
+                &:nth-child(1) {
+                    padding: 1rem;
+                    text-align: center;
+                }
+
+                &:last-child {
+                    padding: 1rem 0.3rem 1rem 1rem;
+                    opacity: 0;
+                }
+
+                &:nth-last-child(2) {
+                    padding: 1rem 0.3rem 1rem 1rem;
+                    opacity: 0;
+                }
+
+            }
+
+            &:hover td:nth-last-child(2) {
+                opacity: 1;
+
+            }
+
+            &:hover td:last-child {
+                opacity: 1;
+            }
+        }
+    }
+
+    #editProductForm {
+        flex-direction: column;
+        position: fixed;
+        width: 400px;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        padding: 1rem;
+        background-color: white;
+        z-index: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+
+            label{
+                font-weight: bold;
+            }
+
+            input{
+                width: 100%;
+                padding: 0.5rem;
+                box-sizing: border-box;
+                margin-top: 4px;
+            }
+            button{
+                padding: 8px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+section .orders {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 20rem 2rem;
+    background-color: vars.$background;
+    height: 50%;
+
+    table#orderTable {
+        margin-top: 2rem;
+        border: 2px solid vars.$border-color;
+        background-color: vars.$table-background;
+        border-collapse: collapse;
+        text-align: center;
+
+        tr {
+            border: 2px solid vars.$border-color;
+
+            td {
+                border: 2px solid vars.$border-color;
+                padding: 1rem;
+            }
+
+            &:nth-child(even) {
+                background-color: vars.$login-button-background;
+            }
+        }
+
+    }
+}

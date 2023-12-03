@@ -1,0 +1,60 @@
+section#nosotros{
+    position: relative;
+   text-align: center;
+    img{
+        width: 50%;
+        display: inline-block;
+       
+      
+    }
+    h1{
+        text-align: center;
+        margin-top: 4rem;
+        
+    }
+    section#presentacion{
+        margin: 5rem;
+        p{
+            text-align: justify;
+        }
+    }
+    
+
+    div.col{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "mostrador1 parrafo1" 
+      "mostrador1 parrafo2"
+      "parrafo3 mostrador2"
+      "parrafo4 mostrador2";
+      #parrafo1{
+        grid-area: parrafo1;
+      }
+      #parrafo2{
+        grid-area: parrafo2;
+      }
+      #parrafo3{
+        grid-area: parrafo3;
+      }
+      #parrafo4{
+        grid-area: parrafo4;
+      }
+      #mostrador1{
+        grid-area: mostrador1;
+      }
+      #mostrador2{
+        grid-area: mostrador2;
+      }
+
+      img{
+        width: 80%;
+        justify-self: center;
+        margin: 2em;
+      }
+  
+    
+    }
+    
+}
